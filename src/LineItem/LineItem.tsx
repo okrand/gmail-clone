@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import "./LineItem.css"
 import { Icon, Label, List, Responsive } from "semantic-ui-react"
 import moment from "moment"
@@ -22,6 +22,7 @@ interface LineItemProps {
 const LineItem = (props: LineItemProps) => {
   const { email, onChecked, onUnchecked } = props
   const [checked, setChecked] = useState(false)
+  useEffect(() => setChecked(false), [email])
   const sameDay = moment(email.date).isSame(moment(), "day")
   const date = sameDay
     ? moment(email.date).format("hh:mm A")

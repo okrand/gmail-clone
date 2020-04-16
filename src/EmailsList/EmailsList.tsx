@@ -7,6 +7,7 @@ interface EmailsListProps {
   emails: Email[]
   setEmails: (newEmails: Email[]) => void
 }
+
 const EmailsList = (props: EmailsListProps) => {
   const [selectedEmails, setSelectedEmails] = useState<Email[]>([])
   const { emails, setEmails, filterBy } = props
@@ -19,6 +20,7 @@ const EmailsList = (props: EmailsListProps) => {
     ])
   }
   useEffect(() => setSelectedEmails([]), [filterBy])
+
   const lineItems =
     emails.length > 0 &&
     emails
