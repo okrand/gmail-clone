@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import "./LineItem.css"
-import { Icon, Label, List } from "semantic-ui-react"
+import { Icon, Label, List, Responsive } from "semantic-ui-react"
 import moment from "moment"
 import EmailModal from "../Modal/Modal"
 
@@ -48,15 +48,17 @@ const LineItem = (props: LineItemProps) => {
             </List.Description>
           }
         />
-        <div className="LineItem-tags">
+        <Responsive className="LineItem-tags" minWidth={780}>
           {email.tags.map((tag, index) => (
             <Label key={index}>
               <Icon name="tag" />
               {tag}
             </Label>
           ))}
-        </div>
-        <List.Description className="LineItem-time">{time}</List.Description>
+        </Responsive>
+        <Responsive minWidth={500} className="LineItem-time">
+          <List.Description>{time}</List.Description>
+        </Responsive>
       </List.Content>
     </List.Item>
   )

@@ -1,5 +1,10 @@
 .App {
   display: flex;
+  background-color: #1b1c1d;
+}
+
+.App-header {
+  min-height: 100vh;
 }
 
 .App-left {
@@ -7,6 +12,5 @@
 }
 
 .App-list {
-  flex: 6;
-  margin-right: 5px;
+  flex: 8;
 }
