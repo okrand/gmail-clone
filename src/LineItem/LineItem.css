@@ -1,0 +1,24 @@
+.LineItem-container {
+  display: flex;
+  align-items: center;
+}
+.LineItem-check {
+  flex: 3;
+}
+.LineItem-sender {
+  flex: 10;
+}
+
+.LineItem-subject {
+  margin-left: 10px;
+  flex: 40;
+}
+
+.LineItem-tags {
+  flex: 15;
+}
+
+.LineItem-time {
+  flex: 5;
+  margin-left: 10px;
+}
