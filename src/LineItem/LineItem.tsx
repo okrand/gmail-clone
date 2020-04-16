@@ -23,13 +23,14 @@ const LineItem = (props: LineItemProps) => {
   const { email, onChecked, onUnchecked } = props
   const [checked, setChecked] = useState(false)
   const sameDay = moment(email.date).isSame(moment(), "day")
-  const time = sameDay
+  const date = sameDay
     ? moment(email.date).format("hh:mm A")
     : moment(email.date).format("ll")
   return (
     <List.Item>
       <List.Content className="LineItem-container">
         <List.Icon
+          data-testid="ListItem-check"
           className="LineItem-check"
           link
           size="big"
@@ -58,7 +59,7 @@ const LineItem = (props: LineItemProps) => {
           ))}
         </Responsive>
         <Responsive minWidth={500} className="LineItem-time">
-          <List.Description>{time}</List.Description>
+          <List.Description>{date}</List.Description>
         </Responsive>
       </List.Content>
     </List.Item>
