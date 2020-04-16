@@ -15,10 +15,12 @@ export interface Email {
 
 interface LineItemProps {
   email: Email
+  onChecked: (email: Email) => void
+  onUnchecked: (email: Email) => void
 }
 
 const LineItem = (props: LineItemProps) => {
-  const { email } = props
+  const { email, onChecked, onUnchecked } = props
   const [checked, setChecked] = useState(false)
   const sameDay = moment(email.date).isSame(moment(), "day")
   const time = sameDay
@@ -32,7 +34,10 @@ const LineItem = (props: LineItemProps) => {
           link
           size="big"
           name={checked ? "check circle outline" : "circle outline"}
-          onClick={() => setChecked(!checked)}
+          onClick={() => {
+            !checked ? onChecked(email) : onUnchecked(email)
+            setChecked(!checked)
+          }}
         />
         <List.Header className="LineItem-sender">{email.sender}</List.Header>
         <EmailModal

@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { Email } from "../LineItem/LineItem"
 import { Segment, List, Label } from "semantic-ui-react"
 
@@ -16,7 +16,11 @@ interface LeftBarProps {
 }
 const LeftBar = (props: LeftBarProps) => {
   const { emails, setFilterBy } = props
-  const [availableTags] = useState<string[]>(getTagsFromEmails(emails))
+
+  const [availableTags, setAvailableTags] = useState<string[]>([])
+  useEffect(() => {
+    setAvailableTags(getTagsFromEmails(emails))
+  }, [emails])
   const listOfTags = availableTags.map((tag, index) => (
     <List.Item key={index} as="a" onClick={() => setFilterBy(tag)}>
       <Label tag>{tag}</Label>
