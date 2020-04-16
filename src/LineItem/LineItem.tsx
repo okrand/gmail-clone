@@ -39,11 +39,7 @@ const LineItem = (props: LineItemProps) => {
           subject={email.subject}
           body={email.body}
           trigger={
-            <List.Description
-              as="a"
-              className="LineItem-subject"
-              onClick={() => {}} // show modal
-            >
+            <List.Description as="a" className="LineItem-subject">
               {email.subject}
             </List.Description>
           }
