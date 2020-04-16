@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/gmail-clone/static/css/main.3be4fb69.chunk.css",
+    "main.js": "/gmail-clone/static/js/main.ba4303fd.chunk.js",
+    "main.js.map": "/gmail-clone/static/js/main.ba4303fd.chunk.js.map",
+    "runtime-main.js": "/gmail-clone/static/js/runtime-main.584d8ad3.js",
+    "runtime-main.js.map": "/gmail-clone/static/js/runtime-main.584d8ad3.js.map",
+    "static/css/2.28a37a71.chunk.css": "/gmail-clone/static/css/2.28a37a71.chunk.css",
+    "static/js/2.24f8f71e.chunk.js": "/gmail-clone/static/js/2.24f8f71e.chunk.js",
+    "static/js/2.24f8f71e.chunk.js.map": "/gmail-clone/static/js/2.24f8f71e.chunk.js.map",
+    "index.html": "/gmail-clone/index.html",
+    "precache-manifest.5e04879ecdc4e1fec980bc27fa92a367.js": "/gmail-clone/precache-manifest.5e04879ecdc4e1fec980bc27fa92a367.js",
+    "service-worker.js": "/gmail-clone/service-worker.js",
+    "static/css/2.28a37a71.chunk.css.map": "/gmail-clone/static/css/2.28a37a71.chunk.css.map",
+    "static/css/main.3be4fb69.chunk.css.map": "/gmail-clone/static/css/main.3be4fb69.chunk.css.map",
+    "static/js/2.24f8f71e.chunk.js.LICENSE.txt": "/gmail-clone/static/js/2.24f8f71e.chunk.js.LICENSE.txt",
+    "static/media/semantic.min.css": "/gmail-clone/static/media/outline-icons.ef60a4f6.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.584d8ad3.js",
+    "static/css/2.28a37a71.chunk.css",
+    "static/js/2.24f8f71e.chunk.js",
+    "static/css/main.3be4fb69.chunk.css",
+    "static/js/main.ba4303fd.chunk.js"
+  ]
+}
